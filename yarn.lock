@@ -2813,6 +2813,11 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
+swipi@^1.1.8:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/swipi/-/swipi-1.1.8.tgz#f127f88176eb3b1cff743efa92eaac5ad7048d15"
+  integrity sha512-7FnDu4BHeEO6blTn+nr8tunlNq/Uy3CQtK8u6wXpmVaZeKV9O3lYcwJuYUE7/TtkJUdmpQ55nq/TGz8tii6r4w==
+
 synckit@^0.8.5:
   version "0.8.5"
   resolved "https://registry.yarnpkg.com/synckit/-/synckit-0.8.5.tgz#b7f4358f9bb559437f9f167eb6bc46b3c9818fa3"
