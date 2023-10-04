@@ -1,9 +1,15 @@
 'use client'
 
 import { useState } from 'react'
+import { Inter } from 'next/font/google'
 import Input from '@/components/Input'
 import { getAnimeDescription } from '@/services/openaiService'
 import DescriptionSkeleton from '@/components/DescriptionSkeleton'
+
+import Button from '@/components/Button'
+import HeroCard from '@/features/HeroCard'
+
+const inter = Inter({ subsets: ['latin'] })
 
 export default function Home(): JSX.Element {
   const [description, setDescription] = useState('')
@@ -23,19 +29,25 @@ export default function Home(): JSX.Element {
   }
 
   return (
-    <main>
-      <div className="p-4 flex-col gap-y-5 flex items-center">
+    <main className={inter.className}>
+      <div className="flex flex-col items-center p-4 gap-y-5">
         <h1 className="text-center">My App</h1>
         <Input value={searchText} onChange={setSearchText} />
         <button
           onClick={generateAnimeDescription}
-          className="px-3 py-2 rounded-lg bg-indigo-500 w-min"
+          className="px-3 py-2 bg-indigo-500 rounded-lg w-min"
         >
           Generate
         </button>
         <h2>{description}</h2>
         {loading && <DescriptionSkeleton />}
       </div>
+      <Button>Description Generator</Button>
+      <HeroCard
+        title="Maria Espaes"
+        message="As Morbius"
+        icon="https://wallpapers.com/images/hd/naruto-face-hpracgzord0mm3tv.jpg"
+      />
     </main>
   )
 }
