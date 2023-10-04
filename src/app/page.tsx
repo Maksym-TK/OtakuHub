@@ -20,7 +20,7 @@ export default function Home(): JSX.Element {
 
   const [loading, setLoading] = useState(false)
 
-  const generate = async (value: string): Promise<void> => {
+  const generateAnimeDescription = async (value: string): Promise<void> => {
     try {
       setLoading(true)
       const response = await getAnimeDescription(value)
@@ -81,7 +81,10 @@ export default function Home(): JSX.Element {
             ))}
           </Swipi>
 
-          <Button onClick={() => generate('Naruto')} className="block mx-auto">
+          <Button
+            onClick={() => generateAnimeDescription('Naruto')}
+            className="block mx-auto"
+          >
             Description Generator
           </Button>
         </div>
