@@ -10,7 +10,7 @@ export default function Home(): JSX.Element {
   const [searchText, setSearchText] = useState('')
   const [loading, setLoading] = useState(false)
 
-  const generate = async (): Promise<void> => {
+  const generateAnimeDescription = async (): Promise<void> => {
     try {
       setLoading(true)
       const response = await getAnimeDescription(searchText)
@@ -28,7 +28,7 @@ export default function Home(): JSX.Element {
         <h1 className="text-center">My App</h1>
         <Input value={searchText} onChange={setSearchText} />
         <button
-          onClick={generate}
+          onClick={generateAnimeDescription}
           className="px-3 py-2 rounded-lg bg-indigo-500 w-min"
         >
           Generate
