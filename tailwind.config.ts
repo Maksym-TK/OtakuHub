@@ -17,10 +17,6 @@ const config: Config = {
         primary: '#1A1A1D',
       },
     },
-    fontSize: {
-      xs: '0.625rem',
-      sm: '0.8rem', //
-    },
   },
   plugins: [],
 }

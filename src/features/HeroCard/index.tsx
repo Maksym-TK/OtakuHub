@@ -14,11 +14,11 @@ const HeroCard = ({
   title,
 }: HeroCardProps): JSX.Element => {
   return (
-    <div className="w-40 h-12 ml-3 relative bg-[#00000069] rounded-xl border border-[#e9e9e936]">
-      <div className="w-12 left-[-12px] top-[-1px] bottom-[-1px] absolute bg-gradient-to-r from-turquoise-border to-pink-border  p-[2px] rounded-full">
+    <div className="w-full h-14 ml-5 relative bg-[#00000069] rounded-xl border border-[#e9e9e936]">
+      <div className="w-14 -left-5 top-[-1px] bottom-[-1px] absolute bg-gradient-to-r from-turquoise-border to-pink-border  p-[2px] rounded-full">
         <Image
-          width={52}
-          height={52}
+          width={54}
+          height={54}
           className="object-cover w-full h-full rounded-full"
           alt="avatar"
           src={icon}
