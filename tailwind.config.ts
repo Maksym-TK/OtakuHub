@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import plugin from 'tailwindcss'
 
 const config: Config = {
   content: [
@@ -17,7 +18,9 @@ const config: Config = {
         primary: '#1A1A1D',
       },
     },
+    screens: {
+      desktop: { min: '1240px' },
+    },
   },
-  plugins: [],
 }
 export default config

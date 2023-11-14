@@ -19,8 +19,16 @@ export default function RootLayout({
   children: React.ReactNode
 }): JSX.Element {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className="h-screen">
+      <body
+        className={`${inter.className}
+        flex justify-center items-center align-middle bg-cover bg-center bg-no-repeat h-[100dvh]`}
+        style={{ backgroundImage: `url('/images/png/main-background.png')` }}
+      >
+        <div className="w-full h-full bg-primary desktop:max-w-5xl desktop:rounded-md desktop:h-[80%] desktop:overflow-auto ">
+          {children}
+        </div>
+      </body>
     </html>
   )
 }

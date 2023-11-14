@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google'
 import Image from 'next/image'
 
 import Swipi from 'swipi'
+
 import { getAnimeDescription } from '@/services/openaiService'
 import DescriptionSkeleton from '@/components/DescriptionSkeleton'
 import './styles.css'
@@ -17,7 +18,6 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home(): JSX.Element {
   const [description, setDescription] = useState('')
-
   const [loading, setLoading] = useState(false)
 
   const generateAnimeDescription = async (value: string): Promise<void> => {
@@ -38,8 +38,8 @@ export default function Home(): JSX.Element {
         <Image
           src="/images/png/mock_banner.png"
           alt="anime"
-          width={500}
-          height={500}
+          width={1000}
+          height={1000}
           className="object-cover w-full h-full "
         />
       </div>
@@ -77,7 +77,12 @@ export default function Home(): JSX.Element {
             biasRight
           >
             {heroCards.map(({ icon, title, id }) => (
-              <HeroCard key={id} icon={icon} title={title} />
+              <HeroCard
+                moveToChat={`/chat?hero=${title}&avatar=${icon}`}
+                key={id}
+                icon={icon}
+                title={title}
+              />
             ))}
           </Swipi>
 

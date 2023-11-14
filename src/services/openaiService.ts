@@ -18,3 +18,26 @@ export const getAnimeDescription = async (
 
   return response.choices[0].message.content || ''
 }
+
+export const converseWithCharacter = async (
+  character: string,
+  userMessage: string,
+): Promise<string> => {
+  const response = await openai.chat.completions.create({
+    model: 'gpt-3.5-turbo',
+    messages: [
+      {
+        role: 'system',
+        content: `Imagine that you are ${character} and answer on his behalf.`,
+      },
+      {
+        role: 'user',
+        content: userMessage,
+      },
+    ],
+    max_tokens: 250,
+    temperature: 1,
+  })
+
+  return response.choices[0].message.content || ''
+}
